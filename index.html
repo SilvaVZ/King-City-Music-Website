@@ -616,15 +616,14 @@
         /* ABOUT SECTION */
         .about-section {
             padding: 4rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
         }
 
         .about-content {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .about-content h2 {
@@ -645,17 +644,24 @@
         @media (max-width: 768px) {
             .about-section {
                 padding: 2.5rem 1rem;
+                background: transparent;
             }
             .about-content {
+                background: var(--card-bg);
+                border: 1px solid var(--border-color);
+                border-radius: 12px;
                 padding: 2rem;
+                text-align: left;
             }
             .about-content h2 {
                 font-size: 1.6rem;
                 margin-bottom: 1rem;
+                text-align: left;
             }
             .about-content p {
                 font-size: 0.95rem;
                 margin-bottom: 1rem;
+                text-align: left;
             }
         }
 
