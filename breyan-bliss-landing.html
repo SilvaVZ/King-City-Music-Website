@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breyan Bliss | King City Music</title>
+    <meta property="og:title" content="Breyan Bliss | King City Music">
+    <meta property="og:description" content="Sacramento-based vocalist and songwriter. Bringing authentic emotion to every project.">
+    <meta property="og:image" content="https://kngcitymusic.com/Breyan-Bliss-Picture.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:url" content="https://kngcitymusic.com/bliss">
+    <meta property="og:type" content="profile">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B4FC4;
+            --primary-dark: #6B3BA3;
+            --dark-bg: #0F0F0F;
+            --card-bg: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --accent: #E94560;
+            --border-color: #2A2A2A;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* BACK TO HOME SECTION */
+        .back-to-home {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: var(--transition);
+        }
+
+        .back-to-home:hover {
+            color: var(--primary);
+        }
+
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .back-text {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .artist-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+        }
+
+        .artist-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .artist-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .artist-role {
+            color: var(--primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .artist-bio {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 8px;
+        }
+
+        .contact-email {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-email a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .contact-email a:hover {
+            color: var(--accent);
+        }
+
+        /* SECTIONS */
+        .links-section {
+            margin-bottom: 2rem;
+        }
+
+        .links-title {
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .links-grid {
+            display: grid;
+            gap: 0.75rem;
+        }
+
+        .link-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .link-item:hover {
+            border-color: var(--primary);
+            background: rgba(139, 79, 196, 0.05);
+            transform: translateX(4px);
+        }
+
+        .link-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: var(--transition);
+        }
+
+        .link-item:hover a {
+            color: var(--primary);
+        }
+
+        .link-name {
+            font-weight: 500;
+        }
+
+        .link-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-left: 1rem;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .footer a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer a:hover {
+            color: var(--accent);
+        }
+
+        @media (max-width: 480px) {
+            .artist-name {
+                font-size: 2rem;
+            }
+
+            .artist-image {
+                width: 150px;
+                height: 150px;
+            }
+
+            .back-to-home {
+                margin-bottom: 1.5rem;
+            }
+
+            .logo-img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .back-text {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- BACK TO HOME -->
+        <a href="https://kngcitymusic.com" class="back-to-home">
+            <div class="logo-img">
+                <img src="King-City-Sticker-Logo.png" alt="King City Music">
+            </div>
+            <span class="back-text">Back to King City Music</span>
+        </a>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="artist-image">
+                <img src="Breyan-Bliss-Picture.jpg" alt="Breyan Bliss">
+            </div>
+            <h1 class="artist-name">Breyan Bliss</h1>
+            <div class="artist-role">Artist</div>
+            <div class="artist-bio">Sacramento-based vocalist and songwriter. Bringing authentic emotion to every project.</div>
+            <div class="contact-email">
+                Contact: <a href="mailto:bliss@kngcity.com">bliss@kngcity.com</a>
+            </div>
+        </div>
+
+        <!-- STREAMING -->
+        <div class="links-section">
+            <div class="links-title">Streaming</div>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://open.spotify.com/artist/4vqBYwt9I3UMHhzFZHylRT?si=hNGqfkUXSnaZtVwhcCstAg" target="_blank">
+                        <span class="link-name">Spotify</span>
+                        <span class="link-icon">🎵</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://music.apple.com/us/artist/breyan-bliss/1432333961" target="_blank">
+                        <span class="link-name">Apple Music</span>
+                        <span class="link-icon">🍎</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://music.youtube.com/channel/UCws-RckpT-5n7koxNKomV8w?si=tRe05hOUi1i3aaE2" target="_blank">
+                        <span class="link-name">YouTube Music</span>
+                        <span class="link-icon">▶️</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://music.amazon.com/artists/B09P8S7GD4/breyan-bliss" target="_blank">
+                        <span class="link-name">Amazon Music</span>
+                        <span class="link-icon">🎧</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://soundcloud.com/breyanbliss" target="_blank">
+                        <span class="link-name">SoundCloud</span>
+                        <span class="link-icon">☁️</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://audiomack.com/breyan-bliss" target="_blank">
+                        <span class="link-name">AudioMack</span>
+                        <span class="link-icon">🎵</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://link.deezer.com/s/32TFP0mStxgr0Xfp2ki1P" target="_blank">
+                        <span class="link-name">Deezer</span>
+                        <span class="link-icon">♪</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://tidal.com/artist/29936646" target="_blank">
+                        <span class="link-name">Tidal</span>
+                        <span class="link-icon">♫</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOCIALS -->
+        <div class="links-section">
+            <div class="links-title">Socials</div>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="https://www.instagram.com/breyanbliss" target="_blank">
+                        <span class="link-name">Instagram</span>
+                        <span class="link-icon">📷</span>
+                    </a>
+                </div>
+                <div class="link-item">
+                    <a href="https://youtube.com/@breyanbliss" target="_blank">
+                        <span class="link-name">YouTube Channel</span>
+                        <span class="link-icon">▶️</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+

@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>King City Music | Independent Record Label</title>
+    <meta property="og:title" content="King City Music | Independent Record Label">
+    <meta property="og:description" content="Sacramento's independent record label supporting emerging artists with professional distribution, publishing, and artist support.">
+    <meta property="og:image" content="https://kngcitymusic.com/King-City-Sticker-Logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://kngcitymusic.com">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B4FC4;
+            --primary-dark: #6B3BA3;
+            --primary-light: #A865D8;
+            --dark-bg: #0F0F0F;
+            --card-bg: #1A1A1A;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B0B0B0;
+            --accent: #E94560;
+            --border-color: #2A2A2A;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.2rem 2rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            padding: 0;
+            margin: 0;
+            line-height: 0;
+            background: transparent !important;
+            border: none !important;
+        }
+
+        .logo-img {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            min-width: 0;
+            line-height: 1;
+        }
+
+        .logo-img img {
+            width: auto;
+            max-width: none;
+            height: 65px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .logo:hover .logo-img {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 0.8rem 1rem;
+            }
+            .logo-img img {
+                height: 50px;
+            }
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.6rem 0.8rem;
+            }
+            .logo-img img {
+                height: 40px;
+            }
+            .nav-links {
+                gap: 0.7rem;
+            }
+            .nav-links a {
+                font-size: 0.75rem;
+            }
+        }
+
+        /* HERO SECTION */
+        .hero {
+            margin-top: 70px;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(139, 79, 196, 0.1) 0%, rgba(233, 69, 96, 0.05) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                margin-top: 60px;
+                padding: 3rem 1.5rem 2.5rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                margin-top: 50px;
+                padding: 2rem 1rem 1.5rem;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* FEATURED RELEASES */
+        .featured-section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* CAROUSEL CONTROLS */
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .carousel-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+
+        .carousel-btn:hover:not(:disabled) {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+
+        .carousel-btn:disabled {
+            background: var(--border-color);
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .releases-carousel {
+            width: 100%;
+            max-width: 900px;
+            overflow: hidden;
+        }
+
+        /* FEATURED RELEASES GRID */
+        .releases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            transition: transform 0.4s ease;
+        }
+
+        @media (max-width: 1024px) {
+            .carousel-container {
+                gap: 1rem;
+            }
+            .releases-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .featured-section {
+                padding: 2.5rem 1rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            .carousel-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                order: 2;
+            }
+            .carousel-btn.carousel-prev {
+                order: 0;
+            }
+            .carousel-btn.carousel-next {
+                order: 2;
+            }
+            .releases-carousel {
+                order: 1;
+            }
+            .releases-grid {
+                display: flex;
+                flex-direction: column;
+                grid-template-columns: none;
+                gap: 1rem;
+                transform: translateX(0) !important;
+            }
+            .release-card {
+                width: 100%;
+                min-height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .featured-section {
+                padding: 1.5rem 0.75rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .carousel-container {
+                gap: 0.75rem;
+            }
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            .releases-grid {
+                gap: 0.75rem;
+            }
+        }
+
+        .release-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .release-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(139, 79, 196, 0.1);
+        }
+
+        .release-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            overflow: hidden;
+        }
+
+        .release-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .release-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .release-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .release-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .release-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 480px) {
+            .release-info {
+                padding: 1rem;
+            }
+            .release-info h3 {
+                font-size: 1rem;
+            }
+            .release-info p {
+                font-size: 0.85rem;
+            }
+            .release-meta {
+                font-size: 0.75rem;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .release-meta .btn {
+                width: 100%;
+                padding: 0.75rem !important;
+                margin-top: 0.5rem;
+            }
+        }
+
+        /* ARTISTS SECTION */
+        .artists-section {
+            padding: 4rem 2rem;
+            background: rgba(139, 79, 196, 0.03);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .artists-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .artist-card {
+            text-align: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .artist-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-6px);
+        }
+
+        .artist-image {
+            width: 100%;
+            aspect-ratio: 1;
+            background: var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .artist-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .artist-info {
+            padding: 2rem 1.5rem;
+            min-height: 420px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .artist-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .artist-role {
+            color: var(--primary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .artist-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .artist-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            background: transparent;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .artists-section {
+                padding: 2.5rem 1rem;
+            }
+            .carousel-container.artists-carousel-container {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .carousel-btn {
+                order: 2;
+            }
+            .carousel-btn.carousel-prev {
+                order: 0;
+            }
+            .carousel-btn.carousel-next {
+                order: 2;
+            }
+            .artists-carousel {
+                order: 1;
+            }
+            .artists-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                transform: translateX(0) !important;
+            }
+            .artist-card {
+                width: 100%;
+                min-height: auto;
+            }
+            .artist-grid {
+                gap: 1.5rem;
+            }
+            .artist-info {
+                padding: 1.5rem 1rem;
+                min-height: auto;
+            }
+            .artist-info h3 {
+                font-size: 1.2rem;
+            }
+            .artist-info p {
+                font-size: 0.9rem;
+                margin-bottom: 1rem;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .artists-section {
+                padding: 1.5rem 0.75rem;
+            }
+            .artists-grid {
+                gap: 1rem;
+            }
+            .artist-info {
+                padding: 1rem 0.75rem;
+                min-height: auto;
+            }
+            .artist-info h3 {
+                font-size: 1rem;
+            }
+            .artist-role {
+                font-size: 0.8rem;
+            }
+            .artist-info p {
+                font-size: 0.8rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.4;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .social-link {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+        }
+
+        /* ABOUT SECTION */
+        .about-section {
+            padding: 4rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-content {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 3rem;
+        }
+
+        .about-content h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .about-section {
+                padding: 2.5rem 1rem;
+            }
+            .about-content {
+                padding: 2rem;
+            }
+            .about-content h2 {
+                font-size: 1.6rem;
+                margin-bottom: 1rem;
+            }
+            .about-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .about-section {
+                padding: 1.5rem 0.75rem;
+            }
+            .about-content {
+                padding: 1.25rem;
+            }
+            .about-content h2 {
+                font-size: 1.3rem;
+                margin-bottom: 0.75rem;
+            }
+            .about-content p {
+                font-size: 0.85rem;
+                margin-bottom: 0.75rem;
+                line-height: 1.6;
+            }
+        }
+
+        /* CONTACT SECTION */
+        .contact-section {
+            padding: 4rem 2rem;
+            background: rgba(233, 69, 96, 0.03);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-container h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .contact-intro {
+            text-align: center;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(139, 79, 196, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .submit-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 2.5rem 1rem;
+            }
+            .contact-container h2 {
+                font-size: 1.6rem;
+            }
+            .contact-intro {
+                font-size: 0.95rem;
+            }
+            .form-group {
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-section {
+                padding: 1.5rem 0.75rem;
+            }
+            .contact-container h2 {
+                font-size: 1.3rem;
+                margin-bottom: 0.75rem;
+            }
+            .contact-intro {
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+            }
+            .form-group {
+                margin-bottom: 0.75rem;
+            }
+            .form-group label {
+                font-size: 0.85rem;
+                margin-bottom: 0.35rem;
+            }
+            .form-group input,
+            .form-group textarea {
+                padding: 0.6rem;
+                font-size: 16px;
+            }
+            .form-group textarea {
+                min-height: 100px;
+            }
+            .submit-btn {
+                padding: 0.8rem;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .footer-section a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: var(--transition);
+        }
+
+        .footer-section a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-socials a {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .footer-socials a:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 2rem 1rem 1.5rem;
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .footer-section h4 {
+                font-size: 0.95rem;
+                margin-bottom: 0.75rem;
+            }
+            .footer-section a {
+                font-size: 0.9rem;
+                margin-bottom: 0.4rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            footer {
+                padding: 1.5rem 0.75rem 1rem;
+            }
+            .footer-content {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+                margin-bottom: 1rem;
+            }
+            .footer-content .footer-section:first-child {
+                grid-column: 1 / 3;
+                grid-row: 1;
+            }
+            .footer-content .footer-section:nth-child(2) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+            .footer-content .footer-section:nth-child(3) {
+                grid-column: 1;
+                grid-row: 2;
+            }
+            .footer-section h4 {
+                font-size: 0.9rem;
+                margin-bottom: 0.5rem;
+            }
+            .footer-section a {
+                font-size: 0.85rem;
+                margin-bottom: 0.3rem;
+            }
+            .footer-bottom {
+                padding-top: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* UTILITIES */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 480px) {
+            .btn {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">
+            <span class="logo-img">
+                <img src="King-City-Sticker-Logo.png" alt="King City Music">
+            </span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#releases">Releases</a></li>
+            <li><a href="#artists">Artists</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+        <h1>Independent Music. Your Way.</h1>
+        <p>King City Music is Sacramento's independent record label. We support artists who create with intention.</p>
+    </section>
+
+    <!-- FEATURED RELEASES -->
+    <section id="releases" class="featured-section">
+        <h2 class="section-title">Latest Releases</h2>
+        <div class="carousel-container">
+            <button class="carousel-btn carousel-prev" id="prevBtn" aria-label="Previous release">❮</button>
+            <div class="releases-carousel">
+                <div class="releases-grid" id="releasesGrid">
+                    <div class="release-card">
+                        <div class="release-image">
+                            <img src="Drifting.jpg" alt="DRIFTING">
+                        </div>
+                        <div class="release-info">
+                            <h3>DRIFTING</h3>
+                            <p>Luix</p>
+                            <div class="release-meta">
+                                <span>2026</span>
+                                <a href="https://luix.kngcitymusic.com/DRIFTING" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Listen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="release-card">
+                        <div class="release-image">
+                            <img src="Lust4Luv.png" alt="LUST4LUV">
+                        </div>
+                        <div class="release-info">
+                            <h3>LUST4LUV</h3>
+                            <p>Breyan Bliss</p>
+                            <div class="release-meta">
+                                <span>2026</span>
+                                <a href="https://bliss.kngcitymusic.com/LUST4LUV" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Listen</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="release-card">
+                        <div class="release-image">
+                            <img src="Wicked.png" alt="WICKED">
+                        </div>
+                        <div class="release-info">
+                            <h3>WICKED</h3>
+                            <p>Luix</p>
+                            <div class="release-meta">
+                                <span>2026</span>
+                                <a href="https://luix.kngcitymusic.com/WICKED" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Listen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn carousel-next" id="nextBtn" aria-label="Next release">❯</button>
+        </div>
+    </section>
+
+    <!-- ARTISTS -->
+    <section id="artists" class="artists-section">
+        <div class="artists-container">
+            <h2 class="section-title">Our Roster</h2>
+            <div class="carousel-container artists-carousel-container">
+                <button class="carousel-btn carousel-prev" id="artistsPrevBtn" aria-label="Previous artist">❮</button>
+                <div class="artists-carousel">
+                    <div class="artists-grid" id="artistsGrid">
+                        <!-- Breyan Bliss -->
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <img src="Breyan-Bliss-Picture.jpg" alt="Breyan Bliss">
+                            </div>
+                            <div class="artist-info">
+                                <h3>Breyan Bliss</h3>
+                                <div class="artist-role">Artist</div>
+                                <p>Sacramento-based vocalist and songwriter. Bringing authentic emotion to every project.</p>
+                                <div class="artist-links">
+                                    <a href="https://open.spotify.com/artist/4vqBYwt9I3UMHhzFZHylRT?si=hNGqfkUXSnaZtVwhcCstAg" target="_blank" class="social-link" title="Spotify">🎵</a>
+                                    <a href="https://music.apple.com/us/artist/breyan-bliss/1432333961" target="_blank" class="social-link" title="Apple Music">🍎</a>
+                                    <a href="https://www.instagram.com/breyanbliss" target="_blank" class="social-link" title="Instagram">📷</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Luix -->
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <img src="Luix-Picture.jpg" alt="Luix">
+                            </div>
+                            <div class="artist-info">
+                                <h3>Luix</h3>
+                                <div class="artist-role">Artist</div>
+                                <p>Sacramento-based artist creating bold soundscapes and emotional depth. Pushing boundaries with every release.</p>
+                                <div class="artist-links">
+                                    <a href="https://open.spotify.com/artist/20jr40C7cg3cafJjNnUR4K?si=Nk53S6_GSEKH0mNQKwZHiA" target="_blank" class="social-link" title="Spotify">🎵</a>
+                                    <a href="https://music.apple.com/us/artist/luix/577114907" target="_blank" class="social-link" title="Apple Music">🍎</a>
+                                    <a href="https://www.instagram.com/luix.kcmg" target="_blank" class="social-link" title="Instagram">📷</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- UghJesseThisSlaps -->
+                        <div class="artist-card">
+                            <div class="artist-image">
+                                <img src="UghJesseThisSlaps-Picture.jpg" alt="UghJesseThisSlaps">
+                            </div>
+                            <div class="artist-info">
+                                <h3>UghJesseThisSlaps</h3>
+                                <div class="artist-role">Producer</div>
+                                <p>Beat maker and producer. Creating instrumentals and production for King City releases. Custom beats available on BeatStars.</p>
+                                <div class="artist-links">
+                                    <a href="https://www.beatstars.com/ughjessethisslap" target="_blank" class="social-link" title="BeatStars">🎧</a>
+                                    <a href="https://www.instagram.com/jessethisslap" target="_blank" class="social-link" title="Instagram">📷</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn carousel-next" id="artistsNextBtn" aria-label="Next artist">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>About King City Music</h2>
+            <p>Established in 2013, King City Music is an independent record label based in Sacramento, California. We focus on supporting emerging artists who bring authenticity and innovation to their craft.</p>
+            <p>Our mission is simple: provide artists with professional support, fair deals, and the infrastructure to grow their careers. From distribution to publishing administration to direct artist support — we handle the business so you can focus on the art.</p>
+            <p>King City Music is part of the larger King City umbrella brand, with expansion planned into publishing and adjacent services.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2>Get In Touch</h2>
+            <p class="contact-intro">Interested in collaboration? Submit a demo or reach out directly.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="e.g., Demo Submission, Collaboration, etc." required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>King City Music</h4>
+                <p>Sacramento, California</p>
+                <p>Independent Record Label</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#artists">Artists</a>
+                <a href="#releases">Releases</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <a href="https://www.instagram.com/kingcitymusic/">Instagram</a>
+                <a href="https://www.youtube.com/@KngCityMusic">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> King City Music. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // RELEASES CAROUSEL
+        const releasesGrid = document.getElementById('releasesGrid');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const releasesCards = releasesGrid.querySelectorAll('.release-card');
+        const cardsPerView = 3;
+        let releasesIndex = 0;
+
+        function updateReleasesCarousel() {
+            const totalCards = releasesCards.length;
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            prevBtn.disabled = releasesIndex === 0;
+            nextBtn.disabled = releasesIndex >= maxIndex;
+            const offset = releasesIndex * (100 / cardsPerView);
+            releasesGrid.style.transform = `translateX(-${offset}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (releasesIndex > 0) {
+                releasesIndex--;
+                updateReleasesCarousel();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxIndex = Math.max(0, releasesCards.length - cardsPerView);
+            if (releasesIndex < maxIndex) {
+                releasesIndex++;
+                updateReleasesCarousel();
+            }
+        });
+
+        updateReleasesCarousel();
+
+        // ARTISTS CAROUSEL
+        const artistsGrid = document.getElementById('artistsGrid');
+        const artistsPrevBtn = document.getElementById('artistsPrevBtn');
+        const artistsNextBtn = document.getElementById('artistsNextBtn');
+        const artistCards = artistsGrid.querySelectorAll('.artist-card');
+        let artistsIndex = 0;
+
+        function updateArtistsCarousel() {
+            const totalCards = artistCards.length;
+            const maxIndex = Math.max(0, totalCards - cardsPerView);
+            artistsPrevBtn.disabled = artistsIndex === 0;
+            artistsNextBtn.disabled = artistsIndex >= maxIndex;
+            const offset = artistsIndex * (100 / cardsPerView);
+            artistsGrid.style.transform = `translateX(-${offset}%)`;
+        }
+
+        artistsPrevBtn.addEventListener('click', () => {
+            if (artistsIndex > 0) {
+                artistsIndex--;
+                updateArtistsCarousel();
+            }
+        });
+
+        artistsNextBtn.addEventListener('click', () => {
+            const maxIndex = Math.max(0, artistCards.length - cardsPerView);
+            if (artistsIndex < maxIndex) {
+                artistsIndex++;
+                updateArtistsCarousel();
+            }
+        });
+
+        updateArtistsCarousel();
+    </script>
+
+</body>
+</html>
