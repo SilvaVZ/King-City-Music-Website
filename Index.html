@@ -606,7 +606,7 @@
                 margin-bottom: 0.75rem;
                 line-height: 1.4;
                 display: -webkit-box;
-                -webkit-line-clamp: 2;
+                -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
             }
@@ -1107,7 +1107,7 @@
         <div class="contact-container">
             <h2>Get In Touch</h2>
             <p class="contact-intro">Interested in collaboration? Submit a demo or reach out directly.</p>
-            <form>
+            <form name="contact" method="POST" netlify>
                 <div class="form-group">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
